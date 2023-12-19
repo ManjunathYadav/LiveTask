@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class ImageGrid : MonoBehaviour
 {
-    public GameObject imagePrefab; // The prefab of the image you want to instantiate
-    public int imageWidth = 100; // Width of each image
-    public int imageHeight = 100; // Height of each image
-    public float padding = 5f; // Padding between images
+    public GameObject imagePrefab;
+    public int imageWidth = 100;
+    public int imageHeight = 100;
+    public float padding = 5f;
 
     void Start()
     {
@@ -57,9 +57,8 @@ public class ImageGrid : MonoBehaviour
                 if (gridImages.ContainsKey(pos))
                 {
                     Image image = gridImages[pos];
-                    if (pos != clickedPos) // Exclude the clicked image itself
+                    if (pos != clickedPos)
                     {
-                        // Apply random color to available surrounding images
                         image.color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
                     }
                 }
